@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:icon="@drawable/ic_menu_black_24dp"
+    app:showAsAction="always"
+    android:title="comecar">
+<item
+    android:title="Versão:"
+    android:id="@+id/Versao"/>
+
+
+
+    <item
+        android:id="@+id/consola"
+        android:title="Consola:"
+        />
+
+
+</menu>
