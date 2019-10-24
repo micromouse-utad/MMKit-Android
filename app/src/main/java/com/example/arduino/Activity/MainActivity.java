@@ -164,12 +164,13 @@ public class MainActivity extends AppCompatActivity {
         if (bluetoothAdapter == null) {
             //Verificar se o Dispositivo suporta Bluetooth
             Toast.makeText(getApplicationContext(), "Este dispositivo não suporta Bluetooth.", Toast.LENGTH_LONG).show();
-//            finish();
+            finish();
         } else {
             //Ativar o Bluetooth
 
             Intent atibaoBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(atibaoBluetooth, SOLICITA_ATIVACAO);
+
             //startActivityForResult Esta  a espera de um numero inteiro
 
 
@@ -192,7 +193,6 @@ public class MainActivity extends AppCompatActivity {
                 if (conexao) {
                     //Desconnectar
                     try {
-
                         meuSocket.close();
                         Toast.makeText(getApplicationContext(), "Bluetooth foi desconnectado", Toast.LENGTH_LONG).show();
                         conexao = false;
